@@ -6,3 +6,6 @@ package
  - play # 组件开发实验室
  - theme # 主题目录
  - utils # 工具函数目录
+
+
+node 18.20.4
