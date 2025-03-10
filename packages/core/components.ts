@@ -1,4 +1,4 @@
-import { ZsButton } from "@zs-element/components";
+import { ZsButton, ZsIcon, ZsButtonGroup } from "@zs-base-ui/components";
 import type { Plugin } from "vue";
 
-export default [ZsButton] as Plugin[];
+export default [ZsButton, ZsIcon, ZsButtonGroup] as Plugin[];

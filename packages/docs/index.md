@@ -3,7 +3,7 @@
 layout: home
 
 hero:
-  name: "Zs-Element"
+  name: "zs-base-ui"
   text: "芝士组件库"
   tagline: My great project tagline
   actions:

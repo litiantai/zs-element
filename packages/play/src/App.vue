@@ -1,9 +1,7 @@
-<script setup lang="ts">
-import HelloWorld from "./components/HelloWorld.vue";
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <zs-button></zs-button>
+  <zs-button type="primary" size="small" loading>test</zs-button>
 </template>
 
 <style scoped>

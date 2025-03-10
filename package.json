@@ -1,39 +1,51 @@
 {
-  "name": "@zs-element/workspace",
+  "name": "@zs-base-ui/workspace",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "pnpm --filter @zs-element/play dev",
-    "docs:dev": "pnpm --filter @zs-element/docs dev",
-    "docs:build":"pnpm --filter @zs-element/docs build",
-    "test": "echo 'todo"
+    "dev": "pnpm --filter @zs-base-ui/play dev",
+    "docs:dev": "pnpm --filter @zs-base-ui/docs dev",
+    "docs:build": "pnpm --filter @zs-base-ui/docs build",
+    "test": "pnpm --filter @zs-base-ui/components test",
+    "story": "pnpm --filter @zs-base-ui/play storybook",
+    "build": "pnpm --filter zs-base-ui build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.5.2",
+    "@fortawesome/free-solid-svg-icons": "^6.5.2",
+    "@fortawesome/vue-fontawesome": "^3.0.8",
+    "@popperjs/core": "^2.11.8",
     "@types/lodash-es": "^4.17.12",
     "@types/node": "^20.11.20",
     "@vitejs/plugin-vue": "^5.0.4",
     "@vitejs/plugin-vue-jsx": "3.1.0",
     "@vue/tsconfig": "^0.5.1",
+    "async-validator": "^4.2.5",
+    "move-file-cli": "^3.0.0",
+    "npm-run-all": "^4.1.5",
     "postcss-color-mix": "1.1.0",
     "postcss-each": "^1.1.0",
     "postcss-each-variables": "^0.3.0",
     "postcss-for": "^2.1.1",
     "postcss-nested": "^6.0.1",
+    "release-it": "^18.1.2",
+    "rimraf": "^6.0.1",
     "typescript": "^5.7.3",
     "vite": "^5.1.4",
     "vitest": "^1.4.0",
     "vue-tsc": "^1.8.27"
   },
   "dependencies": {
+    "@zs-base-ui/hooks": "workspace:*",
+    "@zs-base-ui/theme": "workspace:*",
+    "@zs-base-ui/utils": "workspace:*",
     "lodash-es": "^4.17.21",
+    "postcss-less": "^6.0.0",
     "vue": "^3.4.19",
-    "zs-element": "workspace:*",
-    "@zs-element/hooks": "workspace:*",
-    "@zs-element/theme": "workspace:*",
-    "@zs-element/utils": "workspace:*"
+    "zs-base-ui": "workspace:*"
   }
 }

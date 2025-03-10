@@ -2,9 +2,9 @@ import { defineConfig } from "vitepress";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "Zs-Element",
+  title: "zs-base-ui",
   description: "芝士组件库",
-  base: "/zs-element/", // 在gittub仓库后面的路径，若没有则加载不出来样式
+  base: "/zs-base-ui/", // 在github仓库后面的路径，若没有则加载不出来样式
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
