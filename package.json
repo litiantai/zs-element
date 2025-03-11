@@ -9,7 +9,8 @@
     "docs:build": "pnpm --filter @zs-base-ui/docs build",
     "test": "pnpm --filter @zs-base-ui/components test",
     "story": "pnpm --filter @zs-base-ui/play storybook",
-    "build": "pnpm --filter zs-base-ui build"
+    "build": "pnpm --filter zs-base-ui build",
+    "release": "pnpm --filter zs-base-ui release"
   },
   "keywords": [],
   "author": "",
@@ -43,9 +44,12 @@
     "@zs-base-ui/hooks": "workspace:*",
     "@zs-base-ui/theme": "workspace:*",
     "@zs-base-ui/utils": "workspace:*",
+    "element-plus": "^2.7.4",
     "lodash-es": "^4.17.21",
     "postcss-less": "^6.0.0",
     "vue": "^3.4.19",
-    "zs-base-ui": "workspace:*"
+    "zs-base-ui": "workspace:*",
+    "@element-plus/icons-vue": "^2.3.1",
+    "mind-elixir": "^4.1.5"
   }
 }

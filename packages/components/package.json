@@ -14,5 +14,10 @@
     "@vue/test-utils": "^2.4.5",
     "jsdom": "^24.0.0",
     "less": "^4.2.2"
+  },
+  "peerDependencies": {
+    "element-plus": "^2.7.4",
+    "mind-elixir": "^4.1.5",
+    "@element-plus/icons-vue": "^2.3.1"
   }
 }

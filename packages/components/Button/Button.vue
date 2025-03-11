@@ -3,6 +3,7 @@ import { ref, computed, inject } from "vue";
 import type { ButtonProps, ButtonEmits, ButtonInstance } from "./types";
 import { throttle } from "lodash-es";
 import ZsIcon from "../Icon/Icon.vue";
+import { ElButton } from "element-plus";
 import { BUTTON_GROUP_CTX_KEY } from "./constants";
 /**
  * Button.vue
@@ -53,7 +54,7 @@ defineExpose<ButtonInstance>({
 </script>
 
 <template>
-  <component
+  <!-- <component
     :is="props.tag"
     ref="_ref"
     :type="tag === 'button' ? nativeType : void 0"
@@ -88,9 +89,10 @@ defineExpose<ButtonInstance>({
       :style="iconStyle"
     ></zs-icon>
     <slot></slot>
-  </component>
+  </component> -->
+  <el-button type="primary"><slot></slot></el-button>
 </template>
 
 <style>
-@import "./style.css";
+/* @import "./style.css"; */
 </style>
