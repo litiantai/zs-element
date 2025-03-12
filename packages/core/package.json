@@ -1,6 +1,6 @@
 {
   "name": "zs-base-ui",
-  "version": "1.0.2",
+  "version": "1.0.3-0",
   "description": "components library by Vue3 + Ts",
   "main": "./dist/umd/index.umd.cjs",
   "module": "./dist/es/index.js",
