@@ -70,6 +70,9 @@ import MindElixir from "mind-elixir";
 import { debounce, isEmpty } from "lodash-es";
 import { FullScreen } from "@element-plus/icons-vue";
 import { ElMessage } from "element-plus";
+defineOptions({
+  name: "ZsMindMap",
+});
 const props = defineProps({
   questionId: {
     type: Number,
