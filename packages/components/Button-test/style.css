@@ -1,0 +1,356 @@
+.zs-button-group {
+  --zs-button-group-border-color: var(--zs-border-color-lighter);
+}
+.zs-button {
+  --zs-button-font-weight: var(--zs-font-weight-primary);
+  --zs-button-border-color: var(--zs-border-color);
+  --zs-button-bg-color: var(--zs-fill-color-blank);
+  --zs-button-text-color: var(--zs-text-color-regular);
+  --zs-button-disabled-text-color: var(--zs-disabled-text-color);
+  --zs-button-disabled-bg-color: var(--zs-fill-color-blank);
+  --zs-button-disabled-border-color: var(--zs-border-color-light);
+  --zs-button-hover-text-color: var(--zs-color-primary);
+  --zs-button-hover-bg-color: var(--zs-color-primary-light-9);
+  --zs-button-hover-border-color: var(--zs-color-primary-light-7);
+  --zs-button-active-text-color: var(--zs-button-hover-text-color);
+  --zs-button-active-border-color: var(--zs-color-primary);
+  --zs-button-active-bg-color: var(--zs-button-hover-bg-color);
+  --zs-button-outline-color: var(--zs-color-primary-light-5);
+  --zs-button-active-color: var(--zs-text-color-primary);
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  height: 32px;
+  white-space: nowrap;
+  cursor: pointer;
+  color: var(--zs-button-text-color);
+  text-align: center;
+  box-sizing: border-box;
+  outline: none;
+  transition: 0.1s;
+  font-weight: var(--zs-button-font-weight);
+  user-select: none;
+  vertical-align: middle;
+  -webkit-appearance: none;
+  background-color: var(--zs-button-bg-color);
+  border: var(--zs-border);
+  border-color: var(--zs-button-border-color);
+  padding: 8px 15px;
+  font-size: var(--zs-font-size-base);
+  border-radius: var(--zs-border-radius-base);
+}
+.zs-button + .zs-button {
+  margin-left: 12px;
+}
+.zs-button:hover,
+.zs-button:focus {
+  color: var(--zs-button-hover-text-color);
+  border-color: var(--zs-button-hover-border-color);
+  background-color: var(--zs-button-hover-bg-color);
+  outline: none;
+}
+.zs-button:active {
+  color: var(--zs-button-active-text-color);
+  border-color: var(--zs-button-active-border-color);
+  background-color: var(--zs-button-active-bg-color);
+  outline: none;
+}
+.zs-button.is-plain {
+  --zs-button-hover-text-color: var(--zs-color-primary);
+  --zs-button-hover-bg-color: var(--zs-fill-color-blank);
+  --zs-button-hover-border-color: var(--zs-color-primary);
+  color: var(--zs-button-text-color);
+  background-color: var(--zs-button-bg-color);
+  border-color: var(--zs-button-border-color);
+}
+.zs-button.is-plain:hover,
+.zs-button.is-plain:focus {
+  color: var(--zs-button-hover-text-color);
+  border-color: var(--zs-button-hover-border-color);
+  background-color: var(--zs-button-hover-bg-color);
+  outline: none;
+}
+.zs-button.is-round {
+  border-radius: var(--zs-border-radius-round);
+}
+.zs-button.is-circle {
+  border-radius: 50%;
+  padding: 8px;
+}
+.zs-button.is-loading,
+.zs-button.is-disabled,
+.zs-button.is-disabled:hover,
+.zs-button.is-disabled:focus,
+.zs-button[disabled],
+.zs-button[disabled]:hover,
+.zs-button[disabled]:focus {
+  color: var(--zs-button-disabled-text-color);
+  cursor: not-allowed;
+  background-image: none;
+  background-color: var(--zs-button-disabled-bg-color);
+  border-color: var(--zs-button-disabled-border-color);
+}
+.zs-button [class*="er-icon"] {
+  width: 1em;
+  height: 1em;
+}
+
+/* 以下是原本 @each 循环展开的部分 */
+.zs-button--primary {
+  --zs-button-text-color: var(--zs-color-white);
+  --zs-button-bg-color: var(--zs-color-primary);
+  --zs-button-border-color: var(--zs-color-primary);
+  --zs-button-outline-color: var(--zs-color-primary-light-5);
+  --zs-button-active-color: var(--zs-color-primary-dark-2);
+  --zs-button-hover-text-color: var(--zs-color-white);
+  --zs-button-hover-bg-color: var(--zs-color-primary-light-3);
+  --zs-button-hover-border-color: var(--zs-color-primary-light-3);
+  --zs-button-active-bg-color: var(--zs-color-primary-dark-2);
+  --zs-button-active-border-color: var(--zs-color-primary-dark-2);
+  --zs-button-disabled-text-color: var(--zs-color-white);
+  --zs-button-disabled-bg-color: var(--zs-color-primary-light-5);
+  --zs-button-disabled-border-color: var(--zs-color-primary-light-5);
+
+  color: var(--zs-button-text-color);
+  background-color: var(--zs-button-bg-color);
+  border-color: var(--zs-button-border-color);
+}
+.zs-button--primary:hover,
+.zs-button--primary:focus {
+  color: var(--zs-button-hover-text-color);
+  border-color: var(--zs-button-hover-border-color);
+  background-color: var(--zs-button-hover-bg-color);
+  outline: none;
+}
+.zs-button--primary:active {
+  color: var(--zs-button-active-text-color);
+  border-color: var(--zs-button-active-border-color);
+  background-color: var(--zs-button-active-bg-color);
+  outline: none;
+}
+.zs-button--primary.is-plain {
+  --zs-button-text-color: var(--zs-color-primary);
+  --zs-button-bg-color: var(--zs-color-primary-light-9);
+  --zs-button-border-color: var(--zs-color-primary-light-5);
+  --zs-button-hover-text-color: var(--zs-color-white);
+  --zs-button-hover-bg-color: var(--zs-color-primary);
+  --zs-button-hover-border-color: var(--zs-color-primary);
+  --zs-button-active-text-color: var(--zs-color-white);
+  --zs-button-disabled-text-color: var(--zs-color-primary-light-5);
+  --zs-button-disabled-bg-color: var(--zs-color-primary-light-9);
+  --zs-button-disabled-border-color: var(--zs-color-primary-light-8);
+
+  color: var(--zs-button-text-color);
+  background-color: var(--zs-button-bg-color);
+  border-color: var(--zs-button-border-color);
+}
+.zs-button--primary.is-plain:hover,
+.zs-button--primary.is-plain:focus {
+  color: var(--zs-button-hover-text-color);
+  border-color: var(--zs-button-hover-border-color);
+  background-color: var(--zs-button-hover-bg-color);
+  outline: none;
+}
+
+.zs-button--success {
+  --zs-button-text-color: var(--zs-color-white);
+  --zs-button-bg-color: var(--zs-color-success);
+  --zs-button-border-color: var(--zs-color-success);
+  --zs-button-outline-color: var(--zs-color-success-light-5);
+  --zs-button-active-color: var(--zs-color-success-dark-2);
+  --zs-button-hover-text-color: var(--zs-color-white);
+  --zs-button-hover-bg-color: var(--zs-color-success-light-3);
+  --zs-button-hover-border-color: var(--zs-color-success-light-3);
+  --zs-button-active-bg-color: var(--zs-color-success-dark-2);
+  --zs-button-active-border-color: var(--zs-color-success-dark-2);
+  --zs-button-disabled-text-color: var(--zs-color-white);
+  --zs-button-disabled-bg-color: var(--zs-color-success-light-5);
+  --zs-button-disabled-border-color: var(--zs-color-success-light-5);
+
+  color: var(--zs-button-text-color);
+  background-color: var(--zs-button-bg-color);
+  border-color: var(--zs-button-border-color);
+}
+.zs-button--success:hover,
+.zs-button--success:focus {
+  color: var(--zs-button-hover-text-color);
+  border-color: var(--zs-button-hover-border-color);
+  background-color: var(--zs-button-hover-bg-color);
+  outline: none;
+}
+.zs-button--success:active {
+  color: var(--zs-button-active-text-color);
+  border-color: var(--zs-button-active-border-color);
+  background-color: var(--zs-button-active-bg-color);
+  outline: none;
+}
+.zs-button--success.is-plain {
+  --zs-button-text-color: var(--zs-color-success);
+  --zs-button-bg-color: var(--zs-color-success-light-9);
+  --zs-button-border-color: var(--zs-color-success-light-5);
+  --zs-button-hover-text-color: var(--zs-color-white);
+  --zs-button-hover-bg-color: var(--zs-color-success);
+  --zs-button-hover-border-color: var(--zs-color-success);
+  --zs-button-active-text-color: var(--zs-color-white);
+  --zs-button-disabled-text-color: var(--zs-color-success-light-5);
+  --zs-button-disabled-bg-color: var(--zs-color-success-light-9);
+  --zs-button-disabled-border-color: var(--zs-color-success-light-8);
+
+  color: var(--zs-button-text-color);
+  background-color: var(--zs-button-bg-color);
+  border-color: var(--zs-button-border-color);
+}
+.zs-button--success.is-plain:hover,
+.zs-button--success.is-plain:focus {
+  color: var(--zs-button-hover-text-color);
+  border-color: var(--zs-button-hover-border-color);
+  background-color: var(--zs-button-hover-bg-color);
+  outline: none;
+}
+
+.zs-button--warning {
+  --zs-button-text-color: var(--zs-color-white);
+  --zs-button-bg-color: var(--zs-color-warning);
+  --zs-button-border-color: var(--zs-color-warning);
+  --zs-button-outline-color: var(--zs-color-warning-light-5);
+  --zs-button-active-color: var(--zs-color-warning-dark-2);
+  --zs-button-hover-text-color: var(--zs-color-white);
+  --zs-button-hover-bg-color: var(--zs-color-warning-light-3);
+  --zs-button-hover-border-color: var(--zs-color-warning-light-3);
+  --zs-button-active-bg-color: var(--zs-color-warning-dark-2);
+  --zs-button-active-border-color: var(--zs-color-warning-dark-2);
+  --zs-button-disabled-text-color: var(--zs-color-white);
+  --zs-button-disabled-bg-color: var(--zs-color-warning-light-5);
+  --zs-button-disabled-border-color: var(--zs-color-warning-light-5);
+
+  color: var(--zs-button-text-color);
+  background-color: var(--zs-button-bg-color);
+  border-color: var(--zs-button-border-color);
+}
+.zs-button--warning:hover,
+.zs-button--warning:focus {
+  color: var(--zs-button-hover-text-color);
+  border-color: var(--zs-button-hover-border-color);
+  background-color: var(--zs-button-hover-bg-color);
+  outline: none;
+}
+.zs-button--warning:active {
+  color: var(--zs-button-active-text-color);
+  border-color: var(--zs-button-active-border-color);
+  background-color: var(--zs-button-active-bg-color);
+  outline: none;
+}
+.zs-button--warning.is-plain {
+  --zs-button-text-color: var(--zs-color-warning);
+  --zs-button-bg-color: var(--zs-color-warning-light-9);
+  --zs-button-border-color: var(--zs-color-warning-light-5);
+  --zs-button-hover-text-color: var(--zs-color-white);
+  --zs-button-hover-bg-color: var(--zs-color-warning);
+  --zs-button-hover-border-color: var(--zs-color-warning);
+  --zs-button-active-text-color: var(--zs-color-white);
+  --zs-button-disabled-text-color: var(--zs-color-warning-light-5);
+  --zs-button-disabled-bg-color: var(--zs-color-warning-light-9);
+  --zs-button-disabled-border-color: var(--zs-color-warning-light-8);
+
+  color: var(--zs-button-text-color);
+  background-color: var(--zs-button-bg-color);
+  border-color: var(--zs-button-border-color);
+}
+.zs-button--warning.is-plain:hover,
+.zs-button--warning.is-plain:focus {
+  color: var(--zs-button-hover-text-color);
+  border-color: var(--zs-button-hover-border-color);
+  background-color: var(--zs-button-hover-bg-color);
+  outline: none;
+}
+
+.zs-button--info {
+  --zs-button-text-color: var(--zs-color-white);
+  --zs-button-bg-color: var(--zs-color-info);
+  --zs-button-border-color: var(--zs-color-info);
+  --zs-button-outline-color: var(--zs-color-info-light-5);
+  --zs-button-active-color: var(--zs-color-info-dark-2);
+  --zs-button-hover-text-color: var(--zs-color-white);
+  --zs-button-hover-bg-color: var(--zs-color-info-light-3);
+  --zs-button-hover-border-color: var(--zs-color-info-light-3);
+  --zs-button-active-bg-color: var(--zs-color-info-dark-2);
+  --zs-button-active-border-color: var(--zs-color-info-dark-2);
+  --zs-button-disabled-text-color: var(--zs-color-white);
+  --zs-button-disabled-bg-color: var(--zs-color-info-light-5);
+  --zs-button-disabled-border-color: var(--zs-color-info-light-5);
+
+  color: var(--zs-button-text-color);
+  background-color: var(--zs-button-bg-color);
+  border-color: var(--zs-button-border-color);
+}
+.zs-button--info:hover,
+.zs-button--info:focus {
+  color: var(--zs-button-hover-text-color);
+  border-color: var(--zs-button-hover-border-color);
+  background-color: var(--zs-button-hover-bg-color);
+  outline: none;
+}
+.zs-button--info:active {
+  color: var(--zs-button-active-text-color);
+  border-color: var(--zs-button-active-border-color);
+  background-color: var(--zs-button-active-bg-color);
+  outline: none;
+}
+.zs-button--info.is-plain {
+  --zs-button-text-color: var(--zs-color-info);
+  --zs-button-bg-color: var(--zs-color-info-light-9);
+  --zs-button-border-color: var(--zs-color-info-light-5);
+  --zs-button-hover-text-color: var(--zs-color-white);
+  --zs-button-hover-bg-color: var(--zs-color-info);
+  --zs-button-hover-border-color: var(--zs-color-info);
+  --zs-button-active-text-color: var(--zs-color-white);
+  --zs-button-disabled-text-color: var(--zs-color-info-light-5);
+  --zs-button-disabled-bg-color: var(--zs-color-info-light-9);
+  --zs-button-disabled-border-color: var(--zs-color-info-light-8);
+
+  color: var(--zs-button-text-color);
+  background-color: var(--zs-button-bg-color);
+  border-color: var(--zs-button-border-color);
+}
+.zs-button--info.is-plain:hover,
+.zs-button--info.is-plain:focus {
+  color: var(--zs-button-hover-text-color);
+  border-color: var(--zs-button-hover-border-color);
+  background-color: var(--zs-button-hover-bg-color);
+  outline: none;
+}
+
+.zs-button--danger {
+  --zs-button-text-color: var(--zs-color-white);
+  --zs-button-bg-color: var(--zs-color-danger);
+  --zs-button-border-color: var(--zs-color-danger);
+  --zs-button-outline-color: var(--zs-color-danger-light-5);
+  --zs-button-active-color: var(--zs-color-danger-dark-2);
+  --zs-button-hover-text-color: var(--zs-color-white);
+  --zs-button-hover-bg-color: var(--zs-color-danger-light-3);
+  --zs-button-hover-border-color: var(--zs-color-danger-light-3);
+  --zs-button-active-bg-color: var(--zs-color-danger-dark-2);
+  --zs-button-active-border-color: var(--zs-color-danger-dark-2);
+  --zs-button-disabled-text-color: var(--zs-color-white);
+  --zs-button-disabled-bg-color: var(--zs-color-danger-light-5);
+  --zs-button-disabled-border-color: var(--zs-color-danger-light-5);
+
+  color: var(--zs-button-text-color);
+  background-color: var(--zs-button-bg-color);
+  border-color: var(--zs-button-border-color);
+}
+.zs-button--danger:hover,
+.zs-button--danger:focus {
+  color: var(--zs-button-hover-text-color);
+  border-color: var(--zs-button-hover-border-color);
+  background-color: var(--zs-button-hover-bg-color);
+  outline: none;
+}
+.zs-button--danger:active {
+  color: var(--zs-button-active-text-color);
+  border-color: var(--zs-button-active-border-color);
+  background-color: var(--zs-button-active-bg-color);
+  outline: none;
+}

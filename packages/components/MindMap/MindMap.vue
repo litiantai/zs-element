@@ -116,6 +116,7 @@ const data: WritableComputedRef<any> = computed({
 });
 const tags: Ref<any> = ref([]);
 
+throw new Error("test");
 const refresh = () => {
   nextTick(() => {
     mind.refresh(data.value);
